@@ -1,0 +1,826 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Framework Automacao Conquista</title>
+        <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+	    <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7e408aed24af91e1ad76f49a74ecfa0ef1d97cfb/spark/css/spark-style.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+            
+
+      
+        
+</style></head>    <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa bdd-report standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Framework Automacao Conquista</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">abr. 29, 2021 06:53:06 PM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('tag-view')">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('exception-view')">
+        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
+          <span class="icon-holder">
+            <i class="fa fa-bug"></i>
+          </span>
+          <span class="title">Exception</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>            <div class="page-container">
+                <div class="main-content">
+<div class="test-wrapper row test-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tests</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+						
+						
+						
+						<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning pull-right"></span></a>
+						<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-tag"></i>
+					</a>
+					<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" href="#">@tag</a>
+						<a class="dropdown-item" href="#">@tag1</a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item"  status="fail" test-id="1"
+					author=""
+					tag="@tag"
+					device="">
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">Title of your feature</p>
+							<p class="duration text-sm">0h 0m 16s+105ms</p>
+							<span class="datetime">18:53:06 PM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-fail">Title of your feature</h5>
+									<span class='badge badge-success'>04.29.2021 18:53:06</span>
+									<span class='badge badge-danger'>04.29.2021 18:53:22</span>
+									<span class='badge badge-default'>0h 0m 16s+105ms</span>
+								</div>
+								<div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @tag</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									I want to use this template for my feature file
+								</div>
+							</div>
+						</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">Demo automationpractice</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="BaseSteps.queAcessoOSite()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given que acesso o site</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="BaseSteps.addUmaRoupaNoCarrinho()">
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
+								</span>
+								<span>When add uma roupa no carrinho</span>
+							</div>
+				<textarea disabled class="code-block">com.microsoft.playwright.PlaywrightException: Error {
+  message='Unexpected token "/" while parsing selector "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+=========================== logs ===========================
+  checking visibility of "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+  name='Error
+  stack='Error: Unexpected token "/" while parsing selector "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+=========================== logs ===========================
+  checking visibility of "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+    at unexpected (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:76:16)
+    at consumeSimpleSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:202:23)
+    at consumeComplexSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:130:48)
+    at consumeArgument (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:126:16)
+    at consumeFunctionArguments (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:110:25)
+    at Object.parseCSS (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:215:20)
+    at C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\selectorParser.js:29:43
+    at Array.map (<anonymous>)
+    at Object.parseSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\selectorParser.js:23:33)
+    at Selectors._parseSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\selectors.js:98:41)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:88)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:96)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.FrameImpl.isVisibleImpl(FrameImpl.java:529)
+	at com.microsoft.playwright.impl.PageImpl.lambda$isVisible$34(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.PageImpl.isVisible(PageImpl.java:826)
+	at com.microsoft.playwright.Page.isVisible(Page.java:2811)
+	at br.com.playwright.cyber.pages.HomePage.addCart(HomePage.java:18)
+	at br.com.playwright.cyber.steps.BaseSteps.addUmaRoupaNoCarrinho(BaseSteps.java:24)
+	at ✽.add uma roupa no carrinho(file:src/test/resources/features/Demo.feature:8)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Unexpected token "/" while parsing selector "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+=========================== logs ===========================
+  checking visibility of "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+  name='Error
+  stack='Error: Unexpected token "/" while parsing selector "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+=========================== logs ===========================
+  checking visibility of "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+    at unexpected (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:76:16)
+    at consumeSimpleSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:202:23)
+    at consumeComplexSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:130:48)
+    at consumeArgument (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:126:16)
+    at consumeFunctionArguments (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:110:25)
+    at Object.parseCSS (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\cssParser.js:215:20)
+    at C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\selectorParser.js:29:43
+    at Array.map (<anonymous>)
+    at Object.parseSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\common\selectorParser.js:23:33)
+    at Selectors._parseSelector (C:\Users\Felix\AppData\Local\Temp\playwright-java-3168398256263940583\package\lib\server\selectors.js:98:41)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:209)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:189)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:86)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:96)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.FrameImpl.isVisibleImpl(FrameImpl.java:529)
+	at com.microsoft.playwright.impl.PageImpl.lambda$isVisible$34(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.PageImpl.isVisible(PageImpl.java:826)
+	at com.microsoft.playwright.Page.isVisible(Page.java:2811)
+	at br.com.playwright.cyber.pages.HomePage.addCart(HomePage.java:18)
+	at br.com.playwright.cyber.steps.BaseSteps.addUmaRoupaNoCarrinho(BaseSteps.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
+	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
+	at cucumber.runner.TestStep.run(TestStep.java:50)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
+	at cucumber.runner.TestCase.run(TestCase.java:46)
+	at cucumber.runner.Runner.runPickle(Runner.java:50)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+							<div class="d-flex align-items-center justify-content-start and" title="BaseSteps.douCheckout()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>And dou checkout</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="BaseSteps.visualizoMinhaRoupaNoSumario()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then Visualizo minha roupa no sumario</span>
+							</div>
+				<div class="details">Step skipped</div>
+					</div>
+				</div>
+	</div>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div><div class="test-wrapper row tag-view attributes-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tags</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li>
+					<a href="#">
+					<span class="badge badge-primary">2</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@tag</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							
+							<span class='badge badge-danger'>1</span>
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@tag</h4>
+							
+							<span status="fail" class='badge badge-danger'>1 failed</span>
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="fail">
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>18:53:06 PM</td>
+									<td class='linked' test-id='1'>
+										Title of your feature
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="fail">
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>18:53:06 PM</td>
+									<td class='linked' test-id='2'>
+										Demo automationpractice
+										<div class="">
+											<span class="badge badge-default">Title of your feature.Demo automationpractice</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@tag1</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							
+							<span class='badge badge-danger'>1</span>
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@tag1</h4>
+							
+							<span status="fail" class='badge badge-danger'>1 failed</span>
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="fail">
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>18:53:06 PM</td>
+									<td class='linked' test-id='2'>
+										Demo automationpractice
+										<div class="">
+											<span class="badge badge-default">Title of your feature.Demo automationpractice</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div><div class="test-wrapper row exception-view attributes-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Exception</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li>
+					<a href="#">
+					<span class="badge badge-primary">1</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">com.microsoft.playwright.PlaywrightException</p>
+							<p class="duration text-sm">1 tests</p>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>com.microsoft.playwright.PlaywrightException</h4>
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>18:53:22 PM</td>
+									<td class='linked' test-id='4'>
+										When add uma roupa no carrinho
+										<div class="">
+											<span class="badge badge-default">Demo automationpractice</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div>                    <!-- dashboard -->
+<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Features</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='parent-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='0%'>
+						<b>0</b> features passed
+						</small>
+					</div>
+					<div>
+						<small data-tooltip='100%'><b>1</b> features failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Scenarios</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='child-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+					<div>
+						<small data-tooltip='100%'><b>1</b> scenarios failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Steps</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='25%'><b>1</b> steps passed</small></div>
+					<div>
+						<small data-tooltip='25%'><b>1</b> steps failed, 
+						<b>2</b> skipped, <b data-tooltip='50%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Features</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>,00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Scenarios</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>,00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Start</h6>
+							<h4 class="font-weight-light mt-4">abr. 29, 2021 06:53:06 PM</h4>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Duration</h6>
+							<h4 class="font-weight-light mt-4">0h 0m 16s+375ms</h4>
+							<span class="text-semibold font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Timeline</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id="timeline" height="120"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tags</h6>
+				</div>
+				<div class="table-overflow">
+					<table class="table table-sm">
+						<thead>
+							<tr class="bg-gray">
+								<th>Name</th>
+								<th>Passed</th>
+								<th>Failed</th>
+								<th>Others</th>
+								<th>Passed %</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>@tag</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>
+									0%
+								</td>
+							</tr>
+							<tr>
+								<td>@tag1</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>
+									0%
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var statusGroup = {
+	    parentCount: 1,
+		passParent: 0,
+		failParent: 1,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 1,
+		childCount: 1,
+		passChild: 0,
+		failChild: 1,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 1,
+		grandChildCount: 4,
+		passGrandChild: 1,
+		failGrandChild: 1,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 2,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 3,
+		eventsCount: 4,
+		passEvents: 1,
+		failEvents: 1,
+		fatalEvents: 0,
+		errorEvents: 0,
+		warningEvents: 0,
+		skipEvents: 2,
+		infoEvents: 0,
+		debugEvents: 0,
+		exceptionsEvents: 0
+	};
+</script>
+<script>
+	var timeline = {
+	        "Title of your feature":16.105
+	};
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ac7abbc71b4bb073da00153a5a3fdbcfe0c95e2a/spark/js/spark-script.js"></script>
+<script type="text/javascript">
+
+
+            
+        $(document).ready(function() {
+
+        });
+      
+        
+</script></body>
+</html>

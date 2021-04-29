@@ -1,0 +1,90 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-29T21:53:06.719Z",
+        "line": 6,
+        "name": "Demo automationpractice",
+        "description": "",
+        "id": "title-of-your-feature;demo-automationpractice",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16123012000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que acesso o site",
+            "match": {
+              "location": "BaseSteps.queAcessoOSite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "com.microsoft.playwright.PlaywrightException: Error {\n  message\u003d\u0027Unexpected token \"/\" while parsing selector \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  checking visibility of \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nNote: use DEBUG\u003dpw:api environment variable to capture Playwright logs.\n  name\u003d\u0027Error\n  stack\u003d\u0027Error: Unexpected token \"/\" while parsing selector \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  checking visibility of \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nNote: use DEBUG\u003dpw:api environment variable to capture Playwright logs.\n    at unexpected (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:76:16)\n    at consumeSimpleSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:202:23)\n    at consumeComplexSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:130:48)\n    at consumeArgument (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:126:16)\n    at consumeFunctionArguments (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:110:25)\n    at Object.parseCSS (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:215:20)\n    at C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\selectorParser.js:29:43\n    at Array.map (\u003canonymous\u003e)\n    at Object.parseSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\selectorParser.js:23:33)\n    at Selectors._parseSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\selectors.js:98:41)\n}\r\n\tat com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)\r\n\tat com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:88)\r\n\tat com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:96)\r\n\tat com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:79)\r\n\tat com.microsoft.playwright.impl.FrameImpl.isVisibleImpl(FrameImpl.java:529)\r\n\tat com.microsoft.playwright.impl.PageImpl.lambda$isVisible$34(PageImpl.java:827)\r\n\tat com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)\r\n\tat com.microsoft.playwright.impl.PageImpl.isVisible(PageImpl.java:826)\r\n\tat com.microsoft.playwright.Page.isVisible(Page.java:2811)\r\n\tat br.com.playwright.cyber.pages.HomePage.addCart(HomePage.java:18)\r\n\tat br.com.playwright.cyber.steps.BaseSteps.addUmaRoupaNoCarrinho(BaseSteps.java:24)\r\n\tat ✽.add uma roupa no carrinho(file:src/test/resources/features/Demo.feature:8)\r\nCaused by: com.microsoft.playwright.impl.DriverException: Error {\n  message\u003d\u0027Unexpected token \"/\" while parsing selector \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  checking visibility of \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nNote: use DEBUG\u003dpw:api environment variable to capture Playwright logs.\n  name\u003d\u0027Error\n  stack\u003d\u0027Error: Unexpected token \"/\" while parsing selector \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d logs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n  checking visibility of \"/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[2]/div/div[1]/div/a[2]/span\"\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nNote: use DEBUG\u003dpw:api environment variable to capture Playwright logs.\n    at unexpected (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:76:16)\n    at consumeSimpleSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:202:23)\n    at consumeComplexSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:130:48)\n    at consumeArgument (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:126:16)\n    at consumeFunctionArguments (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:110:25)\n    at Object.parseCSS (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\cssParser.js:215:20)\n    at C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\selectorParser.js:29:43\n    at Array.map (\u003canonymous\u003e)\n    at Object.parseSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\common\\selectorParser.js:23:33)\n    at Selectors._parseSelector (C:\\Users\\Felix\\AppData\\Local\\Temp\\playwright-java-3168398256263940583\\package\\lib\\server\\selectors.js:98:41)\n}\r\n\tat com.microsoft.playwright.impl.Connection.dispatch(Connection.java:209)\r\n\tat com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:189)\r\n\tat com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:86)\r\n\tat com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:96)\r\n\tat com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:79)\r\n\tat com.microsoft.playwright.impl.FrameImpl.isVisibleImpl(FrameImpl.java:529)\r\n\tat com.microsoft.playwright.impl.PageImpl.lambda$isVisible$34(PageImpl.java:827)\r\n\tat com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)\r\n\tat com.microsoft.playwright.impl.PageImpl.isVisible(PageImpl.java:826)\r\n\tat com.microsoft.playwright.Page.isVisible(Page.java:2811)\r\n\tat br.com.playwright.cyber.pages.HomePage.addCart(HomePage.java:18)\r\n\tat br.com.playwright.cyber.steps.BaseSteps.addUmaRoupaNoCarrinho(BaseSteps.java:24)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\r\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:46)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\n",
+              "duration": 7794500,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "add uma roupa no carrinho",
+            "match": {
+              "location": "BaseSteps.addUmaRoupaNoCarrinho()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 505500,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "dou checkout",
+            "match": {
+              "location": "BaseSteps.douCheckout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 304400,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Visualizo minha roupa no sumario",
+            "match": {
+              "location": "BaseSteps.visualizoMinhaRoupaNoSumario()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "  I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Demo.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
